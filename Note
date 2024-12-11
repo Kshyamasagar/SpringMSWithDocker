@@ -1,3 +1,4 @@
+----------JOB Endpoints----------
 
 GET    /jobs : get all the jobs
 GET    /jobs/{id} : Get a specific job by id
@@ -5,3 +6,17 @@ POST   /jobs: create a new job{request body should contain the job details}
 DELETE /jobs/{id} : delete a specific job by id
 PUT    /jobs/{id} : Update a specific job by id{request body should contain the job details}
 GET    /jobs/{id}/company : Get the company associated with a specific job id
+
+----------Company Endpoints----------
+
+GET /companies
+PUT /companies/{id}
+POST /companies
+DELETE /companies/{id}
+GET /companies/{id}
+
+----------Company Review endpoints ----------
+GET /companies/{companyId}/reviews
+POST /companies/{companyId}/reviews
+PUT /companies/{companyId}/reviews/{reviewId}
+DELETE /companies/{companyId}/reviews/{reviewId}

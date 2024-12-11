@@ -1,12 +1,22 @@
 package com.sagar.firstJobApp.job;
 
+import jakarta.persistence.*;
+
+@Entity
+//@Table(name="job_table")
 public class Job {
+
+    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
     private String minSalary;
     private String maxSalary;
     private String location;
+
+    public Job() { //while working with JPA, need to have a default constructor
+    }
 
     public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
         this.id = id;
