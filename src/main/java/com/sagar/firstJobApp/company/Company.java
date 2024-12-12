@@ -1,5 +1,6 @@
 package com.sagar.firstJobApp.company;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sagar.firstJobApp.job.Job;
 import jakarta.persistence.*;
 
@@ -14,9 +15,9 @@ public class Company {
     private String name;
     private String description;
 
-
+    @JsonIgnore
     //@OneToMany here represents that one company has many jobs
-    @OneToMany
+    @OneToMany(mappedBy = "company")  //here "company" is the reference defined in JOB class under ManyToOne annotation which will be mapped bt this without creating a separate table
     private List<Job> jobs;
 
 //    private List<Review> reviews;
